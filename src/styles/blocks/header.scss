@@ -5,7 +5,7 @@
   background-size: cover;
   background-position: right;
 
-  @include onTablet {
+  @include ontablet {
     background-position: center;
   }
 
@@ -22,11 +22,11 @@
     line-height: 100%;
     letter-spacing: -1.5px;
 
-    @include onTablet {
+    @include ontablet {
       font-size: 64px;
     }
 
-    @include onDesktop {
+    @include ondesktop {
       font-size: 80px;
     }
   }
@@ -34,13 +34,13 @@
   &__bottom {
     padding-bottom: 88px;
 
-    @include contentPaddingInline;
+    @include contentpaddinginline;
 
-    @include onTablet {
+    @include ontablet {
       padding-bottom: 130px;
     }
 
-    @include onDesktop {
+    @include ondesktop {
       padding-bottom: 203px;
     }
   }

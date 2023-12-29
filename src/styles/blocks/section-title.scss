@@ -8,11 +8,11 @@
   letter-spacing: -1.5px;
   text-align: center;
 
-  @include onTablet {
+  @include ontablet {
     font-size: 48px;
   }
 
-  @include onDesktop {
+  @include ondesktop {
     font-size: 64px;
   }
 
