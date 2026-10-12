@@ -1,7 +1,15 @@
 .header {
   box-sizing: border-box;
 
-  height: 100vh;
+  height: 480px;
+
+  @include onTablet {
+    height: 628px;
+  }
+
+  @include onDesktop {
+    height: 711px;
+  }
   background-color: $background-color-dark;
   background-image: url(images/header-bg-1440.jpg);
   background-size: cover;
@@ -32,6 +40,11 @@
     @include onTablet {
       font-size: 64px;
     }
+
+    @include onDesktop {
+      font-size: 80px;
+      line-height: 80px;
+    }
   }
 
   &__bottom {
@@ -40,6 +53,10 @@
 
     @include onTablet {
       padding-bottom: 130px;
+    }
+
+    @include onDesktop {
+      padding-bottom: 203px;
     }
   }
 }

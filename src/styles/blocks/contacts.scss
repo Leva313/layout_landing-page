@@ -1,58 +1,85 @@
 .contacts {
-  &__inner {
-    display: grid;
-    gap: 48px;
+  @include contentPaddingInline;
+
+  margin-top: 80px;
+
+  @include grid;
+
+  @include onTablet {
+    margin-top: 120px;
+  }
+
+  @include onDesktop {
+    margin-top: 180px;
+  }
+
+  &__title {
+    @include sectionTitle;
+
+    @include onTablet {
+      grid-column: 1 / -1;
+    }
 
     @include onDesktop {
-      grid-template-columns: 1fr 1fr;
-      gap: 96px;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 48px;
     }
   }
 
-  .section__eyebrow {
-    color: $text-color-dark;
+  &__form {
+    @include onTablet {
+      grid-column: 1 / 7;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 6;
+    }
   }
 
-  &__info .section__title {
-    margin-bottom: 24px;
-  }
-
-  &__text {
-    margin: 0 0 40px;
-    font-size: 18px;
-  }
-
-  &__list {
+  &__info {
     display: grid;
-    gap: 20px;
+    align-content: start;
+    gap: 24px;
 
-    margin: 0;
+    margin: 48px 0 0;
     padding: 0;
     list-style: none;
+
+    @include onTablet {
+      grid-column: 7 / 13;
+      margin-top: 0;
+    }
+
+    @include onDesktop {
+      grid-column: 8 / 13;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
   }
 
   &__label {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 140%;
   }
 
-  &__link,
   &__value {
-    font-size: 20px;
-    font-weight: 600;
-    color: $text-color-dark;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+    color: $text-color-bright;
     text-decoration: none;
+
+    &--address {
+      font-style: normal;
+    }
   }
 
-  &__link {
-    @include hover(opacity, 0.6);
+  a#{&}__value {
+    @include hover(opacity, 0.7);
   }
 }

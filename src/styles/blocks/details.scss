@@ -1,14 +1,47 @@
 .details {
-  &__grid {
-    display: grid;
-    gap: 40px 20px;
+  @include contentPaddingInline;
+
+  margin-top: 92px;
+
+  @include onTablet {
+    margin-top: 120px;
+  }
+
+  @include onDesktop {
+    margin-top: 144px;
+  }
+
+  &__title {
+    @include sectionTitle;
 
     @include onTablet {
-      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 64px;
     }
 
     @include onDesktop {
-      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 48px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 40px;
+
+    @include onTablet {
+      row-gap: 48px;
+    }
+  }
+
+  &__button {
+    margin-top: 40px;
+
+    @include onTablet {
+      width: calc((100% - 11 * #{$grid-gap}) / 12 * 8 + 7 * #{$grid-gap});
+      margin: 48px auto 0;
+    }
+
+    @include onDesktop {
+      width: calc((100% - 11 * #{$grid-gap}) / 12 * 4 + 3 * #{$grid-gap});
     }
   }
 }

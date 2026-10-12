@@ -1,12 +1,17 @@
-$tablet-min-width: 576px;
+$tablet-min-width: 744px;
 $desktop-min-width: 1024px;
+$content-max-width: 1020px;
+$grid-gap: 24px;
 $transition-duration: 0.3s;
 
 $text-color-bright:#fff;
 $text-color-dark:#1d1d1d;
-$text-color-muted:#8c8c8c;
 $background-color-gray:#c2c2c2;
-$background-color-dark:#161616;
-$background-color-light:#f2f2f2;
-$border-color-dark:#2e2e2e;
-$border-color-light:#dcdcdc;
+$background-color-dark:#1d1d1d;
+
+$field-background:#f8f8fa;
+$field-text-color:#292929;
+$field-placeholder-color:#7e7e83;
+$field-hover-border-color:#d5d7de;
+$button-shadow-color:rgba(232, 232, 240, 0.4);
+$button-shadow-color-pressed:rgba(232, 232, 240, 0.64);

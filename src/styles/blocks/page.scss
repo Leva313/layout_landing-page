@@ -3,12 +3,15 @@
   color: $text-color-bright;
   font-size: 16px;
   line-height: 140%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   scroll-behavior: smooth;
 
   &__body {
     margin: 0;
     min-width: 320px;
+    background-color: $background-color-dark;
   }
 
   &__menu {

@@ -16,11 +16,44 @@
   @include onTablet {
     padding-inline: 72px;
   }
+
+  @include onDesktop {
+    $side: "calc((100% - #{$content-max-width}) / 2)";
+
+    padding-inline: unquote("max(72px, #{$side})");
+  }
+}
+
+@mixin grid() {
+  display: grid;
+  column-gap: $grid-gap;
+
+  @include onTablet {
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
 @mixin hover ($property, $toValue) {
   transition: #{$property} 0.3s;
   &:hover {
     #{$property}: $toValue;
+  }
+}
+
+@mixin sectionTitle() {
+  margin: 0 0 48px;
+
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+  text-align: center;
+
+  @include onTablet {
+    font-size: 48px;
+  }
+
+  @include onDesktop {
+    font-size: 64px;
   }
 }

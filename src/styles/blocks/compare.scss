@@ -1,0 +1,30 @@
+.compare {
+  @include contentPaddingInline;
+
+  margin-top: 92px;
+
+  @include onTablet {
+    margin-top: 132px;
+  }
+
+  @include onDesktop {
+    margin-top: 164px;
+  }
+
+  &__title {
+    @include sectionTitle;
+
+    @include onDesktop {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__list {
+    @include grid;
+    row-gap: 40px;
+
+    @include onTablet {
+      row-gap: 48px;
+    }
+  }
+}
