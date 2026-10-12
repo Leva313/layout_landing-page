@@ -1,3 +1,51 @@
 .footer {
-  margin: 0;
+  padding-block: 48px;
+  @include contentPaddingInline;
+  background-color: #000;
+  color: $text-color-muted;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    max-width: 1200px;
+    margin-inline: auto;
+
+    @include onDesktop {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo-link {
+    display: flex;
+  }
+
+  &__logo {
+    height: 38px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+  }
+
+  &__link {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $text-color-bright;
+
+    @include hover(opacity, 0.6);
+  }
+
+  &__copy {
+    margin: 0;
+    font-size: 14px;
+  }
 }

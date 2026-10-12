@@ -1,0 +1,114 @@
+.bike-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px 24px;
+  border: 1px solid $border-color-light;
+  border-radius: 16px;
+  background-color: $text-color-bright;
+
+  transition: transform $transition-duration, box-shadow $transition-duration;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  &--featured {
+    border-color: $text-color-dark;
+    background-color: $text-color-dark;
+    color: $text-color-bright;
+
+    @include onDesktop {
+      margin-top: -16px;
+      padding-block: 48px;
+    }
+  }
+
+  &__badge {
+    align-self: flex-start;
+    margin: 0 0 16px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background-color: $text-color-bright;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: $text-color-dark;
+  }
+
+  &__name {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  &__text {
+    margin: 0 0 24px;
+    color: $text-color-muted;
+  }
+
+  &__specs {
+    margin: 0 0 32px;
+  }
+
+  &__spec {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding-block: 12px;
+    border-bottom: 1px solid $border-color-light;
+
+    font-size: 14px;
+  }
+
+  &--featured &__spec {
+    border-bottom-color: $border-color-dark;
+  }
+
+  &__spec-name {
+    color: $text-color-muted;
+  }
+
+  &__spec-value {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  &__price {
+    margin: auto 0 24px;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__link {
+    display: block;
+    padding: 14px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+
+    transition: background-color $transition-duration, color 0.3s;
+
+    &:hover {
+      background-color: $text-color-dark;
+      color: $text-color-bright;
+    }
+  }
+
+  &--featured &__link:hover {
+    background-color: $text-color-bright;
+    color: $text-color-dark;
+  }
+}

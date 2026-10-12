@@ -2,8 +2,14 @@
   box-sizing: border-box;
 
   height: 100vh;
-  background-image: url(../styles/images/header-bg.png);
+  background-color: $background-color-dark;
+  background-image: url(images/header-bg-1440.jpg);
   background-size: cover;
+
+  @media (min-width: 1440px), (min-width: 768px) and (min-resolution: 2dppx) {
+    background-image: url(images/header-bg-2560.jpg);
+  }
+
   background-position: right;
 
   @include onTablet {

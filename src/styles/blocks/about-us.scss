@@ -1,0 +1,62 @@
+.about-us {
+  &__inner {
+    display: grid;
+    gap: 48px;
+
+    @include onDesktop {
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      gap: 96px;
+    }
+  }
+
+  &__text .section__title {
+    margin-bottom: 24px;
+  }
+
+  &__lead {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 160%;
+    color: $background-color-gray;
+
+    @include onTablet {
+      font-size: 20px;
+    }
+  }
+
+  &__stats {
+    display: grid;
+    gap: 24px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include onTablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding-top: 16px;
+    border-top: 1px solid $border-color-dark;
+  }
+
+  &__stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+  }
+
+  &__stat-label {
+    font-size: 14px;
+    line-height: 140%;
+    color: $text-color-muted;
+  }
+}
